@@ -30,28 +30,35 @@ https://github.com/MorriganR/c2hwic
 
 * Altera Cyclone II EP2C35F484C8 FPGA
 
-* ISP1564HL HS USB PCI Host Controller
+* NXP ISP1564HL HS USB PCI Host Controller
 
     3.3V power supply.
     Built-in 1.8V regulator.
 
-* MIC 49150-1.2 LDO Regulator with dual input voltages
+* Micrel MIC49150-1.2 LDO Regulator with dual input voltages
 
+    [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/mic49150.pdf)
     Located between FPGA and ISP1564HL
 
 * MIC39102 Low Voltage Regulator
 
-* MXQ3311 Maxim ... ?
+    [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/20005834A.pdf)
 
-* C9059 Infineon? Atmel?
+* MIC37302 Low Voltage uCap LDO Regulator (3A)
 
-* Mic 37302 Low Voltage uCap LDO Regulator (3A)
+    [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/MIC37300-01-02-03-3.0A-Low-Voltage-microCap-LDO-Regulator-DS20006169A.pdf)
 
 * Ti CU257C - SN74CBT3257C - 4-bit multiplexer/demultiplexer 5V bus switch
 
 * Micron MT46V16M16-6T 4 Meg x 4 banks x 16 (32MB total) Automotive DDR SDRAM (2.5V, 133MHz/167MHz)
 
 * ADM3222 - Analog Devices Low Power 3.3V RS-232 Line Drivers/Receivers
+
+* Maxim MXQ3311 
+
+    ?
+
+* C9059 Infineon? Atmel?
 
 * Sierra Wireless MC5727 Wireless Module
 
