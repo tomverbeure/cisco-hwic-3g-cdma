@@ -37,9 +37,7 @@ https://github.com/MorriganR/c2hwic
 
 * Micrel MIC49150-1.2 LDO Regulator with dual input voltages
 
-    [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/mic49150.pdf)
-    Located between FPGA and ISP1564HL
-
+    [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/mic49150.pdf) Located between FPGA and ISP1564HL 
 * MIC39102 Low Voltage Regulator
 
     [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/20005834A.pdf)
@@ -79,45 +77,56 @@ PC Express Mini Card: 1x PCIe + USB 2.0
 
     VCC connected to 3.3V of main connector!
 
-Pins:
+FPGA Pins:
+F6
+CLK25                   : L2
+LED_GREEN_CR1           : AA19
+LED_GREEN_CR3           : AB19
+LED_GREEN_CR5           : AA15
+LED_ORANGE_CR5          : AB15
 
-* 84: GND
-* 85: GND
-*     
+X32                     : A12
+X30                     : ?
 
-Cisco Connector (https://pastebin.com/qPgdeLks) of Cisco VWIC3-2MFT card:
 
-GND	69	1			35
+HWIC Pins:
+
+23 GPIOs from FPGA on HWIC connector:
+
+```
+GND	69	1	-	-	35
 		2	GND	GND	36
-	70	3	K1	GND	37
-		4		F5	38
+	70	3	G21 GND	37
+		4   GND	-  	38
 	71	5		GND	39
-		6	GND		40
-	72	7			41
-		8			42
-	73	9			43
+		6	GND	-	40
+	72	7	-	-	41
+		8	-	-	42
+	73	9	-	-	43
 		10	GND	GND	44
-	74	11		K4	45
-		12		K6	46
-	75	13	K7	K8	47
-		14	J7	J8	48
-	76	15	K2	C5	49
-		16	C4	F1	50
-	77	17		GND	51
-		18	H3	H4	52
-	78	19	H5	H6	53
-		20	H7	G5	54
-	79	21	G6	G7	55
-		22			56
-5.0	80	23			57
-		24	GND		58
-GND	81	25			59
-		26	F4	F2	60
-3.3	82	27	E1	F7	61
-		28	F6		62
-GND	83	29	GND	F8	63
-		30	E3	GND	64
-12.	84	31	GND	B13	65
-		32	B11	GND	66
-GND	85	33	GND	W11	67
-		34			68
+	74	11  G22	F21	45
+		12	E21	E22	46
+	75	13	D21 D22	47
+		14	C21 C22	48
+	76	15	J22 -  	49
+		16	-  	N22	50
+	77	17	-	GND	51
+		18	T22	U21	52
+	78	19	V21	V22	53
+		20	W21	W22	54
+	79	21	Y21	Y22	55
+		22	-	N21	56
+5.0	80	23	-	-	57
+		24	GND	-	58
+GND	81	25	T21	-	59
+		26	-  	-  	60
+3.3	82	27	-  	-  	61
+		28	-  	-   62
+GND	83	29	GND	-  	63
+		30	-  	GND	64
+12.	84	31	GND	-  	65
+		32	A12	GND	66
+GND	85	33	GND	L18	67
+		34	-	-	68
+```
+

@@ -51,12 +51,20 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_global_assignment -name QIP_FILE pci/pci.qip
-set_global_assignment -name PRE_FLOW_SCRIPT_FILE "quartus_sh:auto_add_ddr_constraints.tcl"
-set_global_assignment -name POST_FLOW_SCRIPT_FILE "quartus_sh:auto_verify_ddr_timing.tcl"
-set_global_assignment -name QIP_FILE ddr/ddr.qip
-set_global_assignment -name VERILOG_FILE top.v
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE ../rtl/top.v
+
+set_location_assignment PIN_L2 -to clk25
+set_location_assignment PIN_AA19 -to leds[0]
+set_location_assignment PIN_AB19 -to leds[1]
+set_location_assignment PIN_AA15 -to leds[2]
+set_location_assignment PIN_AB15 -to leds[3]
+
+set_global_assignment -name CYCLONEII_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED WITH WEAK PULL-UP"
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
