@@ -72,13 +72,16 @@ PC Express Mini Card: 1x PCIe + USB 2.0
     1.5V and 3.3V
 
     1.5V not connected? MC5727 doesn't seem to need it.
-
+A
 * JTAG connector follows ALTERA USB Blaster pinout
 
     VCC connected to 3.3V of main connector!
 
+
 FPGA Pins:
+
 F6
+
 CLK25                   : L2
 LED_GREEN_CR1           : AA19
 LED_GREEN_CR3           : AB19
@@ -88,45 +91,80 @@ LED_ORANGE_CR5          : AB15
 X32                     : A12
 X30                     : ?
 
+UART_TXD                : D6 (ADM3222/T1IN)
+UART_RXD                : F4 (ADM3222/R1IN)
+UART_RTS                : G6 (ADM3222/T2IN)
+UART_CTS                : H6 (ADM3222/R2IN)
+
 
 HWIC Pins:
 
 23 GPIOs from FPGA on HWIC connector:
 
 ```
-GND	69	1	-	-	35
-		2	GND	GND	36
-	70	3	G21 GND	37
-		4   GND	-  	38
-	71	5		GND	39
-		6	GND	-	40
-	72	7	-	-	41
-		8	-	-	42
-	73	9	-	-	43
-		10	GND	GND	44
-	74	11  G22	F21	45
-		12	E21	E22	46
-	75	13	D21 D22	47
-		14	C21 C22	48
-	76	15	J22 -  	49
-		16	-  	N22	50
-	77	17	-	GND	51
-		18	T22	U21	52
-	78	19	V21	V22	53
-		20	W21	W22	54
-	79	21	Y21	Y22	55
-		22	-	N21	56
-5.0	80	23	-	-	57
-		24	GND	-	58
-GND	81	25	T21	-	59
-		26	-  	-  	60
-3.3	82	27	-  	-  	61
-		28	-  	-   62
-GND	83	29	GND	-  	63
-		30	-  	GND	64
-12.	84	31	GND	-  	65
-		32	A12	GND	66
-GND	85	33	GND	L18	67
-		34	-	-	68
+GND	69	1	-	    -	        35
+		2	GND	    GND	        36
+	70	3	G21     GND	        37
+		4   GND	    -  	        38
+	71	5		    GND	        39
+		6	GND	    -	        40
+	72	7	-	    -	        41
+		8	-	    -	        42
+	73	9	-	    -	        43
+		10	GND	    GND	        44
+	74	11  G22	    F21	        45          11 = DATA0
+		12	E21	    E22	        46
+	75	13	D21     D22	        47
+		14	C21     C22	        48
+	76	15	J22     -  	        49          49 == MXQ12 and nCONFIG_OE_
+		16	-  	    N22	        50          16 == nCONFIG and MXQ12_OE_
+	77	17	-	    GND	        51
+		18	T22	    U21	        52
+	78	19	V21	    V22	        53
+		20	W21	    W22	        54
+	79	21	Y21	    Y22	        55
+		22	-	    N21	        56
+5.0	80	23	MXQ1    -	        57
+		24	GND	    MXQ2	    58
+GND	81	25	T21	    -	        59          25 == DCLK_OE_ / 59 == DCLK
+		26	-  	    -  	        60
+3.3	82	27	-  	    -  	        61
+		28	-  	    -           62
+GND	83	29	GND	    -  	        63
+		30	-  	    GND	        64
+12.	84	31	GND	    -  	        65
+		32	A12	    GND	        66
+GND	85	33	GND	    L18/MXQ7    67
+		34	-   	-	        68
 ```
+
+C9059:
+
+1:      GND                         8:      5V
+2:      -                           7:      Pin 13 of MXQ3311
+3:      Pin 6 and 9 of MXQ3311      6:      -
+4:      Pin 11 of MXQ3311           5:      Pin 8  of MXQ3311
+
+VWIC board:
+
+1:      GND                     8:      5V
+2:      -                       7:      Pin 13 of MXQ3311
+3:      Pin 9  of MXQ3311       6:      -
+4:      Pin 11 of MXQ3311       5:      Pin 8  of MXQ3311
+
+MXQ3311:
+
+1:      Pin 23 of HWIC         14:
+2:      Pin 58 of HWIC         13: Pin 7 of C9059
+3:                             12: 
+4:      GND                    11: Pin 4 of C9059
+5:                             10: 3.3V
+6:      Pin 3 of C9059          9: Pin 3 of C9059
+7:      Pin 67 of HWIC/L18      8: Pin 5 of C9059
+
+
+DCLK: Uses SN74CBTLV1G125 SOT23-5 package
+http://www.ti.com/product/SN74CBTLV1G125
+
+
 
