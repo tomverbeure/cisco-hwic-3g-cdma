@@ -167,4 +167,45 @@ DCLK: Uses SN74CBTLV1G125 SOT23-5 package
 http://www.ti.com/product/SN74CBTLV1G125
 
 
+SDRAM:
+
+```
+DQ0         : B20
+
+DQ1         : A20
+DQ2         : B19
+
+DQ3         : A19
+DQ4         : D16
+
+DQ5         : E15
+DQ6         : D15
+
+DQ7         : C14
+
+LDQS        : A17
+
+LDM         : E14
+WE_         : B14
+CAS_        : B17
+RAS_        : B18
+CS_         : A5
+
+BA0         : C17
+BA1         : C18
+A10/AP      : A3
+A0          : A10
+A1          : A9
+A2          : A7
+A3          : B11
+
+DQ8         : 
+DQ4         : 
+DQ4         : 
+DQ4         : 
+```
+
+
+
+
 
