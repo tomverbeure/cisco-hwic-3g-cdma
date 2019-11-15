@@ -171,7 +171,7 @@ SDRAM:
 
 ```
 DQ0         : B20
-
+                            
 DQ1         : A20
 DQ2         : B19
 
@@ -199,10 +199,35 @@ A1          : A9
 A2          : A7
 A3          : B11
 
-DQ8         : 
-DQ4         : 
-DQ4         : 
-DQ4         : 
+DQ15        : F12
+
+DQ14        : A15
+DQ13        : B15
+
+DQ12        : A16
+DQ11        : B16
+
+DQ10        : F13
+DQ9         : F14
+
+DQ8         : D14
+
+UDQS        : A13
+
+UDM         : A14
+
+CK#         : B4
+CK          : A4
+CKE         : C9
+
+A12         : D9
+A11         : D11
+A9          : B5
+A8          : B6
+A7          : B7
+A6          : B8
+A5          : B9
+A4          : B10
 ```
 
 
