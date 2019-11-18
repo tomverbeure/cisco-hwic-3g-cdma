@@ -1,6 +1,7 @@
 
 # Cisco HWIC-3G-CDMA
 
+There is a pretty detailed reverse-engineering write-up [here](https://tomverbeure.github.io/2019/11/11/Cisco-HWIC-3G-CDMA.html).
 
 * Mentioned on [FPGA Board Hack](https://hackaday.io/project/159853-fpga-board-hack)
 
