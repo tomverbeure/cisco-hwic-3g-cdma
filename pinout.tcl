@@ -3,19 +3,26 @@
 ;#------------------------------------------------------------
 ;# Clock - 25MHz
 ;#------------------------------------------------------------
+;# Single ended Xtal clock
 set_location_assignment PIN_L2 -to clk25
 
 ;#------------------------------------------------------------
 ;# LEDs
 ;#------------------------------------------------------------
+
+;# Green LED on CR1
 set_location_assignment PIN_AA19 -to leds[0]
+;# Green LED on CR3
 set_location_assignment PIN_AB19 -to leds[1]
+;# Green LED    on CR5
+;# Green YELLOW on CR5
 set_location_assignment PIN_AA15 -to leds[2]
 set_location_assignment PIN_AB15 -to leds[3]
 
 ;#------------------------------------------------------------
 ;# DDR DRAM
 ;#------------------------------------------------------------
+;# Name as used by the Quartus MegaCore with 'ddr' prefix
 set_location_assignment PIN_B7   -to ddr_dq[0]
 set_location_assignment PIN_A7   -to ddr_dq[1]
 set_location_assignment PIN_F9   -to ddr_dq[2]
