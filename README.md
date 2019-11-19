@@ -9,34 +9,34 @@ There is a pretty detailed reverse-engineering write-up [here](https://tomverbeu
 
 Main Components:
 
-    * Altera Cyclone II EP2C35F484C8 FPGA
-    * Micron MT46V16M16-6T 4 Meg x 4 banks x 16 (32MB total) Automotive DDR SDRAM (2.5V, 133MHz/167MHz)
-    * NXP ISP1564HL HS USB PCI Host Controller
-        * 3.3V power supply.
-        * Built-in 1.8V regulator.
-    * Sierra Wireless MC5727 Wireless Module
-        * Controlled by host over USB
-        * Can be replaced by "Mini PCI-E to USB3.0 PCI Express Adapter Card PCI-E to USB 3.0 Expansion Card", a break-out 
-          board connects the mini card USB to a regular USB connector.
-    * JTAG connector follows ALTERA USB Blaster pinout
+* Altera Cyclone II EP2C35F484C8 FPGA
+* Micron MT46V16M16-6T 4 Meg x 4 banks x 16 (32MB total) Automotive DDR SDRAM (2.5V, 133MHz/167MHz)
+* NXP ISP1564HL HS USB PCI Host Controller
+    * 3.3V power supply.
+    * Built-in 1.8V regulator.
+* Sierra Wireless MC5727 Wireless Module
+    * Controlled by host over USB
+    * Can be replaced by "Mini PCI-E to USB3.0 PCI Express Adapter Card PCI-E to USB 3.0 Expansion Card", a break-out 
+      board connects the mini card USB to a regular USB connector.
+* JTAG connector follows ALTERA USB Blaster pinout
 
 Various Other Components:
 
-    * ADM3222 - Analog Devices Low Power 3.3V RS-232 Line Drivers/Receivers
-    * AT90SC12836RCT/C9059 Crypto Chip
-    * Maxim MXQ3311 
-        * 5V/3.3V level shifters?
-    * Ti CU257C - SN74CBT3257C - 4-bit multiplexer/demultiplexer 5V bus switch
-        * ?
+* ADM3222 - Analog Devices Low Power 3.3V RS-232 Line Drivers/Receivers
+* AT90SC12836RCT/C9059 Crypto Chip
+* Maxim MXQ3311 
+    * 5V/3.3V level shifters?
+* Ti CU257C - SN74CBT3257C - 4-bit multiplexer/demultiplexer 5V bus switch
+    * ?
 
 Power Regulators:
 
-    * Micrel MIC49150-1.2 LDO Regulator with dual input voltages
-        * [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/mic49150.pdf) Located between FPGA and ISP1564HL 
-    * MIC39102 Low Voltage Regulator
-        * [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/20005834A.pdf)
-    * MIC37302 Low Voltage uCap LDO Regulator (3A)
-        * [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/MIC37300-01-02-03-3.0A-Low-Voltage-microCap-LDO-Regulator-DS20006169A.pdf)
+* Micrel MIC49150-1.2 LDO Regulator with dual input voltages
+    * [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/mic49150.pdf) Located between FPGA and ISP1564HL 
+* MIC39102 Low Voltage Regulator
+    * [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/20005834A.pdf)
+* MIC37302 Low Voltage uCap LDO Regulator (3A)
+    * [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/MIC37300-01-02-03-3.0A-Low-Voltage-microCap-LDO-Regulator-DS20006169A.pdf)
 
 # Power 
 
