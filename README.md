@@ -51,7 +51,18 @@ All essential componets for LED blinky are connected to 3.3V. No need for 5V pow
     * 1.5V and 3.3V
         1.5V not connected? MC5727 doesn't seem to need it.
 
+
+# Examples
+
+* [Blinky](./blinky)
+
+    The Hello World of FPGAs!
+    
+
 # FPGA Pin Connections
+
+The pin location declaration for Quartus can be found in [./pinout.tcl](./pinout.tcl). Example projects
+won't necessarily use this file, e.g. if some IP uses a different name.
 
 FPGA Pins:
 
