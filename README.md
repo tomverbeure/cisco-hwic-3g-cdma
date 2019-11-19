@@ -16,7 +16,7 @@ Main Components:
     * Built-in 1.8V regulator.
 * Sierra Wireless MC5727 Wireless Module
     * Controlled by host over USB
-    * Can be replaced by "Mini PCI-E to USB3.0 PCI Express Adapter Card PCI-E to USB 3.0 Expansion Card", a break-out 
+    * Can be replaced by "Mini PCI-E to USB3.0 PCI Express Adapter Card PCI-E to USB 3.0 Expansion Card", a break-out
       board connects the mini card USB to a regular USB connector.
 * JTAG connector follows ALTERA USB Blaster pinout
 
@@ -24,7 +24,7 @@ Various Other Components:
 
 * ADM3222 - Analog Devices Low Power 3.3V RS-232 Line Drivers/Receivers
 * AT90SC12836RCT/C9059 Crypto Chip
-* Maxim MXQ3311 
+* Maxim MXQ3311
     * 5V/3.3V level shifters?
 * Ti CU257C - SN74CBT3257C - 4-bit multiplexer/demultiplexer 5V bus switch
     * ?
@@ -32,13 +32,13 @@ Various Other Components:
 Power Regulators:
 
 * Micrel MIC49150-1.2 LDO Regulator with dual input voltages
-    * [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/mic49150.pdf) Located between FPGA and ISP1564HL 
+    * [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/mic49150.pdf) Located between FPGA and ISP1564HL
 * MIC39102 Low Voltage Regulator
     * [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/20005834A.pdf)
 * MIC37302 Low Voltage uCap LDO Regulator (3A)
     * [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/MIC37300-01-02-03-3.0A-Low-Voltage-microCap-LDO-Regulator-DS20006169A.pdf)
 
-# Power 
+# Power
 
 All essential componets for LED blinky are connected to 3.3V. No need for 5V power rail to make that work.
 
@@ -46,7 +46,7 @@ All essential componets for LED blinky are connected to 3.3V. No need for 5V pow
 
 # PC Express Mini Card Info
 
-* PC Express Mini Card: 1x PCIe + USB 2.0 
+* PC Express Mini Card: 1x PCIe + USB 2.0
     * https://en.wikipedia.org/wiki/PCI_Express#PCI_Express_Mini_Card
     * 1.5V and 3.3V
         1.5V not connected? MC5727 doesn't seem to need it.
@@ -57,7 +57,7 @@ All essential componets for LED blinky are connected to 3.3V. No need for 5V pow
 * [Blinky](./blinky)
 
     The Hello World of FPGAs!
-    
+
 
 # FPGA Pin Connections
 
@@ -140,7 +140,7 @@ MXQ3311 connections:
 ```
 1:      Pin 23 of HWIC         14:
 2:      Pin 58 of HWIC         13: Pin 7 of C9059
-3:                             12: 
+3:                             12:
 4:      GND                    11: Pin 4 of C9059
 5:                             10: 3.3V
 6:      Pin 3 of C9059          9: Pin 3 of C9059
@@ -150,7 +150,7 @@ MXQ3311 connections:
 SDRAM to FPGA connections:
 ```
 DQ0         : B20
-                            
+
 DQ1         : A20
 DQ2         : B19
 
@@ -209,8 +209,77 @@ A5          : B9
 A4          : B10
 ```
 
+Empty TSOP-48 (NOR flash?) footprint to FPGA:
+```
+pin  1 : AA17           Pin 48:  Y17
+pin  2 :  W16           Pin 47: Pin 14      pulled high.
+pin  3 :  V15           Pin 46: GND
+pin  4 :  W15           Pin 45:  AB10
+pin  5 :  V14           Pin 44:  AB8
+pin  6 :  W14           Pin 43:   V9
+pin  7 :  Y14           Pin 42:   W7
+pin  8 : AA14           Pin 41:   W9
+pin  9 :  U10           Pin 40:  AA7
+pin 10 :  U13           Pin 39:  AA9
+pin 11 :  Y20           Pin 38:  AB7
+pin 12 :  Y13           Pin 37: VCCIO
+pin 13 : NC             Pin 36:  AB9
+pin 14 : Pin 47         Pin 35:   Y5
+pin 15 : ???            Pin 34:   V5
+pin 16 :  U9            Pin 33:   Y6
+pin 17 :  U8            Pin 32:   W8
+pin 18 : AB14           Pin 31:  AA6
+pin 19 : AA13           Pin 30:  AA8
+pin 20 : AB13           Pin 29:  AB6
+pin 21 : AA12           Pin 28:  Y19
+pin 22 :  V11           Pin 27: GND
+pin 23 :  W11           Pin 26:  Y18
+pin 24 : AA11           Pin 25: AA10
+```
 
-# Other Cisco boards with an FPGA: 
+# NOR Flash
+
+The PCB has an unpopulated TSOP-48 footprint. The pads of this footprint match the requirements
+for NOR flash.
+
+*Some NAND flash also has a TSOP-48 footprint, but the pinout is not compatible. So NOR flash only.*
+
+Pin 15 on this package is not routed to the FPGA, but its function is `RY/BY#`, the status of program or erase operation.
+There are other ways for the FPGA to figure out this status, so it's not strictly needed.
+
+Pin 47 (`BYTE#$`) is often used in these flash devices to select between 8-bit or 16-bit mode. On the
+PCB, it is connected to pin 14 `wp#`). On a live board, these pins have a level of 3.3V, which is
+good, because otherwise the flash would be write protected. There is an unpopulated resistor on these
+pins that is connected to ground. There is no reason to populated this pin.
+
+NOR flash:
+
+* 256K x16 (e.g. Microchip SST39VF401C)
+
+    * Matches. Pins 9, 10, 16 are NC on this chip.
+    * Pin 47 is NC. (So no selection between 8bit or 16bit mode.
+
+* 1M x 8bit or 256K x16 (e.g. Cypress S29AL008J)
+
+    * Matches. Pins 9, 10, 16 are NC on this chip.
+    * Pin 47 (BYTE#) selects between 8bit or 16bit mode. 3.3V -> 16bit mode only.
+
+* 4M x8 or 2M x16 (e.g. Cypress S29J032J)
+
+    * Matches.
+    * Pin 47 (BYTE#) selects between 8bit or 16bit mode. 3.3V -> 16bit mode only.
+
+* 8M x8 or 4M x16 (e.g. Cypress S29GL064S)
+
+    * No Match!
+    * Some models require pin 13 for bit A21, others requires pin 15 for A19. Both pin 13 and pin 15
+      aren't connected to the FPGA.
+
+Conclusion: it's possible to solder a NOR flash onto this PCB with a maximum size of 32Mbit. When
+both 8bit and 16bit more are supported, the flash should be used in 16-bit mode. The pulldown
+resistor should not be populated.
+
+# Other Cisco boards with an FPGA:
 
 * Cisco VWIC3-1MFT-T1/E1 ($4!)
 
@@ -222,7 +291,7 @@ A4          : B10
     * See https://github.com/tomverbeure/cisco-vwic3-2mft
     * See https://hackaday.io/project/159853-fpga-board-hack/log/161719-stratix-ii-cisco-vwic3-2mft)
 
-* Cisco VWIC-2MFT-T1-DI 
+* Cisco VWIC-2MFT-T1-DI
 
     * Xilinx FPGA Spartan XCS30 PQ208CKN9931
 
@@ -232,5 +301,5 @@ A4          : B10
     * MC68LC302 microcontroller
     * 64Kx16 SRAM
     * T1/E1 framers
-    
-    
+
+
