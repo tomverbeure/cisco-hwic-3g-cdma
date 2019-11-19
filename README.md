@@ -201,26 +201,25 @@ A4          : B10
 
 # Other Cisco boards with an FPGA: 
 
-    * Cisco VWIC3-1MFT-T1/E1 ($4!)
+* Cisco VWIC3-1MFT-T1/E1 ($4!)
 
-        * Contains an Altera Stratix II EP2S15 (supported by Quartus Web Edition)
+    * Contains an Altera Stratix II EP2S15 (supported by Quartus Web Edition)
 
-    * Cisco VWIC3-2MFT-T1/E1 ($5!)
+* Cisco VWIC3-2MFT-T1/E1 ($5!)
 
-        * Contains an Altera Stratix II EP2S30 (NOT supported by Quartus Web Edition)
-        * See https://github.com/tomverbeure/cisco-vwic3-2mft
-        * See https://hackaday.io/project/159853-fpga-board-hack/log/161719-stratix-ii-cisco-vwic3-2mft)
+    * Contains an Altera Stratix II EP2S30 (NOT supported by Quartus Web Edition)
+    * See https://github.com/tomverbeure/cisco-vwic3-2mft
+    * See https://hackaday.io/project/159853-fpga-board-hack/log/161719-stratix-ii-cisco-vwic3-2mft)
 
-    * Cisco VWIC-2MFT-T1-DI 
+* Cisco VWIC-2MFT-T1-DI 
 
-        * Xilinx FPGA Spartan XCS30 PQ208CKN9931
+    * Xilinx FPGA Spartan XCS30 PQ208CKN9931
 
-            Super old: 1368 logic cells / 1536 FFs
-            https://www.ece.iastate.edu/~zambreno/classes/cpre583/documents/xilinx/ds060.pdf
+        Super old: 1368 logic cells / 1536 FFs
+        https://www.ece.iastate.edu/~zambreno/classes/cpre583/documents/xilinx/ds060.pdf
 
-        * MC68LC302 microcontroller
-        * 64Kx16 SRAM
-        * T1/E1 framers
-
-
-
+    * MC68LC302 microcontroller
+    * 64Kx16 SRAM
+    * T1/E1 framers
+    
+    
