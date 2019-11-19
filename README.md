@@ -8,6 +8,7 @@ There is a pretty detailed reverse-engineering write-up [here](https://tomverbeu
 # Components
 
 Main Components:
+
     * Altera Cyclone II EP2C35F484C8 FPGA
     * Micron MT46V16M16-6T 4 Meg x 4 banks x 16 (32MB total) Automotive DDR SDRAM (2.5V, 133MHz/167MHz)
     * NXP ISP1564HL HS USB PCI Host Controller
@@ -20,6 +21,7 @@ Main Components:
     * JTAG connector follows ALTERA USB Blaster pinout
 
 Various Other Components:
+
     * ADM3222 - Analog Devices Low Power 3.3V RS-232 Line Drivers/Receivers
     * AT90SC12836RCT/C9059 Crypto Chip
     * Maxim MXQ3311 
@@ -28,6 +30,7 @@ Various Other Components:
         * ?
 
 Power Regulators:
+
     * Micrel MIC49150-1.2 LDO Regulator with dual input voltages
         * [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/mic49150.pdf) Located between FPGA and ISP1564HL 
     * MIC39102 Low Voltage Regulator
