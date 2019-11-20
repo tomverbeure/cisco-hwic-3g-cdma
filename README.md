@@ -4,21 +4,31 @@
 There is a pretty detailed reverse-engineering write-up [here](https://tomverbeure.github.io/2019/11/11/Cisco-HWIC-3G-CDMA.html).
 
 * Mentioned on [FPGA Board Hack](https://hackaday.io/project/159853-fpga-board-hack)
+* [Product Datasheet](https://manualsbrain.com/en/manuals/18492/pdf/90717e773cac1934092aa5e5747f7dc69d763a4f12ae95196a2226f8e41b79ac/cisco-hwic-3g-hspa-g-hwic-3g-hspa-g-data-sheet.pdf)
 
 # Components
 
 Main Components:
 
 * Altera Cyclone II EP2C35F484C8 FPGA
+
+    * [Cyclone II Handbook Vol 1](https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/cyc2/cyc2_cii5v1.pdf)
+
 * Micron MT46V16M16-6T 4 Meg x 4 banks x 16 (32MB total) Automotive DDR SDRAM (2.5V, 133MHz/167MHz)
+
+    * [Datasheet](https://www.micron.com/-/media/client/global/documents/products/data-sheet/dram/mobile-dram/low-power-dram/lpddr/256mb_x8x16_at_ddr_t66a.pdf)
+
 * NXP ISP1564HL HS USB PCI Host Controller
+
+    * [Datasheet](https://www.alldatasheet.com/datasheet-pdf/pdf/255353/NXP/ISP1564HL.html)
     * 3.3V power supply.
     * Built-in 1.8V regulator.
+
 * Sierra Wireless MC5727 Wireless Module
     * Controlled by host over USB
     * Can be replaced by "Mini PCI-E to USB3.0 PCI Express Adapter Card PCI-E to USB 3.0 Expansion Card", a break-out
       board connects the mini card USB to a regular USB connector.
-* JTAG connector follows ALTERA USB Blaster pinout
+* JTAG connector follows ALTERA USB Blaster pinout`
 
 Various Other Components:
 
