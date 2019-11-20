@@ -74,6 +74,10 @@ All essential componets for LED blinky are connected to 3.3V. No need for 5V pow
 
     The Hello World of FPGAs!
 
+* [RS-232](./rs232)
+
+    RS232 loopback: what gets send to UART_RXD is sent back to UART_TXD.
+
 
 # FPGA Pin Connections
 
@@ -89,6 +93,8 @@ LED_GREEN_CR3           : AB19
 LED_GREEN_CR5           : AA15
 LED_ORANGE_CR5          : AB15
 
+UART_DRV_ENA_           : N6 (ADM3222/EN_) - Receiver Enable. Must be 0 to enable RX.
+UART_DRV_SD_            : P6 (ADM3222/SD_) - Shutdown Control. Must be 1 to enable TX.
 UART_TXD                : D6 (ADM3222/T1IN)
 UART_RXD                : F4 (ADM3222/R1IN)
 UART_RTS                : G6 (ADM3222/T2IN)

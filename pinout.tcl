@@ -20,6 +20,16 @@ set_location_assignment PIN_AA15 -to leds[2]
 set_location_assignment PIN_AB15 -to leds[3]
 
 ;#------------------------------------------------------------
+;# RS-232
+;#------------------------------------------------------------
+set_location_assignment PIN_N6   -to uart_drv_ena_
+set_location_assignment PIN_P6   -to uart_drv_sd_
+set_location_assignment PIN_D6   -to uart_txd
+set_location_assignment PIN_F4   -to uart_rxd
+set_location_assignment PIN_G6   -to uart_rts
+set_location_assignment PIN_H6   -to uart_cts
+
+;#------------------------------------------------------------
 ;# DDR DRAM
 ;#------------------------------------------------------------
 ;# Name as used by the Quartus MegaCore with 'ddr' prefix
