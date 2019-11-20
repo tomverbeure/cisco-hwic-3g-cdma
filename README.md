@@ -25,14 +25,20 @@ Main Components:
     * Built-in 1.8V regulator.
 
 * Sierra Wireless MC5727 Wireless Module
+
+    * [Development Manuals](https://www.manualslib.com/products/Sierra-Wireless-Airprime-Mc5727-8797020.html)
     * Controlled by host over USB
     * Can be replaced by "Mini PCI-E to USB3.0 PCI Express Adapter Card PCI-E to USB 3.0 Expansion Card", a break-out
       board connects the mini card USB to a regular USB connector.
+
 * JTAG connector follows ALTERA USB Blaster pinout`
 
 Various Other Components:
 
 * ADM3222 - Analog Devices Low Power 3.3V RS-232 Line Drivers/Receivers
+
+    * [Datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/ADM3202_3222_1385.pdf)
+
 * AT90SC12836RCT/C9059 Crypto Chip
 * Maxim MXQ3311
     * 5V/3.3V level shifters?
@@ -58,8 +64,8 @@ All essential componets for LED blinky are connected to 3.3V. No need for 5V pow
 
 * PC Express Mini Card: 1x PCIe + USB 2.0
     * https://en.wikipedia.org/wiki/PCI_Express#PCI_Express_Mini_Card
-    * 1.5V and 3.3V
-        1.5V not connected? MC5727 doesn't seem to need it.
+    * 1.5V and 3.3V. 
+    * 1.5V not connected? MC5727 doesn't seem to need it.
 
 
 # Examples
