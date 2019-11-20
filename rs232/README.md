@@ -18,5 +18,5 @@ flickering is not visible...)
   typing is sent to the FPGA and looped back to the PC.
 
 
-To stop the Linux serial terminal, type [CTRL-A][\][y].
+To stop the Linux serial terminal, type `[CTRL-A][\][y]`.
 
