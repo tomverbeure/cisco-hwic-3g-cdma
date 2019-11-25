@@ -54,6 +54,12 @@ Power Regulators:
 * MIC37302 Low Voltage uCap LDO Regulator (3A)
     * [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/MIC37300-01-02-03-3.0A-Low-Voltage-microCap-LDO-Regulator-DS20006169A.pdf)
 
+Unpopulated:
+
+* NOR Flash
+
+    * [Datasheet](https://www.alldatasheet.com/datasheet-pdf/pdf/211036/SPANSION/S29GL032N90TFI040.html)
+
 # Power
 
 All essential componets for LED blinky are connected to 3.3V. No need for 5V power rail to make that work.
@@ -247,7 +253,7 @@ pin 11 :  Y20           Pin 38:  AB7
 pin 12 :  Y13           Pin 37: VCCIO
 pin 13 : NC             Pin 36:  AB9
 pin 14 : Pin 47         Pin 35:   Y5
-pin 15 : ???            Pin 34:   V5
+pin 15 : ???            Pin 34:   V8
 pin 16 :  U9            Pin 33:   Y6
 pin 17 :  U8            Pin 32:   W8
 pin 18 : AB14           Pin 31:  AA6
@@ -327,9 +333,9 @@ Pin 63: AD[6]           :   R5
 Pin 64:
 Pin 65: AD[5]           :   R2
 Pin 66: AD[4]           :   R1
-Pin 67: AD[3]           :   T1
-Pin 68: AD[2]           :   T4
-Pin 69: AD[1]           :   T3
+Pin 67: AD[3]           :   T5
+Pin 68: AD[2]           :   T3          Same as AD[1] ???
+Pin 69: AD[1]           :   T3          Same as AD[2] ???
 Pin 70: AD[0]           :   T2
 Pin 71:
 Pin 72:
