@@ -20,6 +20,15 @@ set_location_assignment PIN_AA15 -to leds[2]
 set_location_assignment PIN_AB15 -to leds[3]
 
 ;#------------------------------------------------------------
+;# Miscellanous
+;#------------------------------------------------------------
+
+# Goes to the EN pin of the MIC37032 LDO. When high, this creates
+# the 3.3V power rail for the PCI Express Mini card from the 5V of the HWIC connector.
+# Always assign this to 0 unless you want to use the PCI Express Mini card.
+set_location_assignment PIN_AB17 -to pci_mini_33v_ena
+
+;#------------------------------------------------------------
 ;# RS-232
 ;#------------------------------------------------------------
 set_location_assignment PIN_N6   -to uart_drv_ena_

@@ -53,6 +53,9 @@ Power Regulators:
     * [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/20005834A.pdf)
 * MIC37302 Low Voltage uCap LDO Regulator (3A)
     * [Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/MIC37300-01-02-03-3.0A-Low-Voltage-microCap-LDO-Regulator-DS20006169A.pdf)
+    * EN (pin 1) is controlled by FPGA (AB17)
+    * 5V input
+    * 3.3V output: goes to PCI Express Mini card.
 
 Unpopulated:
 
@@ -368,6 +371,11 @@ Pin 97: SDA             :
 Pin 98:
 Pin 99: PME_            :               ?
 Pin 100:
+```
+
+Miscellanous Pins:
+```
+AB17                    : pin 1 (EN) of MIC37302
 ```
 
 # NOR Flash
