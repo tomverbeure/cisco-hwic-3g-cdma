@@ -337,8 +337,8 @@ Pin 64:
 Pin 65: AD[5]           :   R2
 Pin 66: AD[4]           :   R1
 Pin 67: AD[3]           :   T5
-Pin 68: AD[2]           :   T3          Same as AD[1] ???
-Pin 69: AD[1]           :   T3          Same as AD[2] ???
+Pin 68: AD[2]           :   U3          Uncertain. Might be swapped with AD[3] or AD[1].
+Pin 69: AD[1]           :   T3
 Pin 70: AD[0]           :   T2
 Pin 71:
 Pin 72:

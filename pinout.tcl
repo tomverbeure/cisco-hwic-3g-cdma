@@ -129,7 +129,7 @@ set_location_assignment PIN_R5   -to pci_ad[6]
 set_location_assignment PIN_R2   -to pci_ad[5]
 set_location_assignment PIN_R1   -to pci_ad[4]
 set_location_assignment PIN_T5   -to pci_ad[3]
-;# set_location_assignment PIN_T3   -to pci_ad[2]
+set_location_assignment PIN_U3   -to pci_ad[2]              ;# Could be swapped with pci_ad[3]
 set_location_assignment PIN_T3   -to pci_ad[1]
 set_location_assignment PIN_T2   -to pci_ad[0]
 

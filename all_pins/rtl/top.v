@@ -53,7 +53,7 @@ module top(
     input [20:0]        flash_a,
     input [15:0]        flash_dq,
 
-    output [162:0]      misc_outputs
+    output [161:0]      misc_outputs
 );
 
     assign pci_mini_33V_ena = 1'b0;
