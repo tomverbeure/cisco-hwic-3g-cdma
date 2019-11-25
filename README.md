@@ -64,7 +64,7 @@ All essential componets for LED blinky are connected to 3.3V. No need for 5V pow
 
 * PC Express Mini Card: 1x PCIe + USB 2.0
     * https://en.wikipedia.org/wiki/PCI_Express#PCI_Express_Mini_Card
-    * 1.5V and 3.3V. 
+    * 1.5V and 3.3V.
     * 1.5V not connected? MC5727 doesn't seem to need it.
 
 
@@ -257,6 +257,111 @@ pin 21 : AA12           Pin 28:  Y19
 pin 22 :  V11           Pin 27: GND
 pin 23 :  W11           Pin 26:  Y18
 pin 24 : AA11           Pin 25: AA10
+```
+Important: there's at least one connection wrong in the table above. Need to revisit...
+
+PCI USB Host to FPGA:
+```
+Pin  4: INTA_           :   AA5
+Pin  5: RST_            :   AB18
+Pin  6: SYS_TUNE        :               "Always connect to ground."
+Pin  7: CLK             :   E19
+Pin  8: GNT_            :   J1
+Pin  9: REQ_            :   AB4
+Pin 10: AD[31]          :   C1
+Pin 11:
+Pin 12: AD[30]          :   D2
+Pin 13: AD[29]          :   D1
+Pin 14: AD[28]          :   E1
+Pin 15: AD[27]          :   D4
+Pin 16:
+Pin 17:
+Pin 18:
+Pin 19:
+Pin 20: AD[26]          :   E4
+Pin 21: AD[25]          :   E3
+Pin 22: AD[24]          :   E2
+Pin 23: CBE_[3]         :   Y4
+Pin 24: IDSEL           :   E2          Same as AD[24]
+Pin 25:
+
+Pin 26: AD[23]          :   F3
+Pin 27: AD[22]          :   F2
+Pin 28: AD[21]          :   F1
+Pin 29: AD[20]          :   G5
+Pin 30: AD[19]          :   G3
+Pin 31: AD[18]          :   H4
+Pin 32:
+Pin 33: AD[17]          :   H2
+Pin 34: AD[16]          :   H1
+Pin 35: CBE_[2]         :   Y3
+Pin 36: FRAME_          :   W1
+Pin 37: IRDY_           :   W2
+Pin 38: TRDY_           :   W3
+Pin 39: DEVSEL_         :   W4
+Pin 40:
+Pin 41: STOP_           :   V1
+Pin 42: CLKRUN_         :               10K resistor to GNDA (pin 61)
+Pin 43:
+Pin 44: PERR_           :   V2
+Pin 45: SERR_           :   V4
+Pin 46:
+Pin 47: PAR             :   U2
+Pin 48: CBE_[1]         :   Y2
+Pin 49:
+Pin 50: AD[15]          :   J4
+
+Pin 51: AD[14]          :   J2
+Pin 52: AD[13]          :   N4
+Pin 53: AD[12]          :   N3
+Pin 54: AD[11]          :   N2
+Pin 55:
+Pin 56: AD[10]          :   N1
+Pin 57: AD[9]           :   P5
+Pin 58:
+Pin 59: AD[8]           :   P2
+Pin 60: CBE_[0]         :   Y1
+Pin 61:
+Pin 62: AD[7]           :   P1
+Pin 63: AD[6]           :   R5
+Pin 64:
+Pin 65: AD[5]           :   R2
+Pin 66: AD[4]           :   R1
+Pin 67: AD[3]           :   T1
+Pin 68: AD[2]           :   T4
+Pin 69: AD[1]           :   T3
+Pin 70: AD[0]           :   T2
+Pin 71:
+Pin 72:
+Pin 73:
+Pin 74: XTAL2           :               Pulled down to GND
+Pin 75: XTAL1           :               Going to FPGA with resistive divider?
+
+Pin 76:
+Pin 77:
+Pin 78: OC1_N           :               Connected to OC2_N. Pulled up to VCCIO.
+Pin 79: PWE1_N          :
+Pin 80:
+Pin 81: RREF            :
+Pin 82:
+Pin 83: DM1             :
+Pin 84:
+Pin 85: DP1             :
+Pin 86:
+Pin 87: OC2_N           :
+Pin 88: PWE2_N          :
+Pin 89:
+Pin 90: DM2             :
+Pin 91:
+Pin 92: DP2             :
+Pin 93:
+Pin 94:
+Pin 95:
+Pin 96: SCL             :               Used for config EEPROM. Not used on this board.
+Pin 97: SDA             :
+Pin 98:
+Pin 99: PME_            :               ?
+Pin 100:
 ```
 
 # NOR Flash
