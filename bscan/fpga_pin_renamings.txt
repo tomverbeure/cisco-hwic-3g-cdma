@@ -58,6 +58,7 @@ B14  : ddr_we_n
 A4   : clk_to_sdram[0]
 B4   : clk_to_sdram_n[0]
 
+D5   : pci_xtal
 AA5  : pci_inta_
 AB18 : pci_rst_
 E19  : pci_clk

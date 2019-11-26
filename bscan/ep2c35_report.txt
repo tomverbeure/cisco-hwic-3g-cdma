@@ -164,10 +164,6 @@ D3    (IOD3)              : INPUT     :  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 D3    (IOD3)              : OUTPUT3   :  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 D3    (IOD3)              : CONTROL   :  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 
-D5    (IOD5)              : INPUT     :  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-D5    (IOD5)              : OUTPUT3   :  0 1 0 1 1 0 1 1 1 0 1 1 1 1 0 0 0 ! 
-D5    (IOD5)              : CONTROL   :  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-
 D7    (IOD7)              : INPUT     :  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 D7    (IOD7)              : OUTPUT3   :  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 D7    (IOD7)              : CONTROL   :  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
@@ -1237,6 +1233,10 @@ V1    (pci_stop_)         : CONTROL   :  0 1 1 1 0 1 1 1 0 1 0 0 1 1 0 1 0 !
 W3    (pci_trdy_)         : INPUT     :  1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 ! 
 W3    (pci_trdy_)         : OUTPUT3   :  1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 ! 
 W3    (pci_trdy_)         : CONTROL   :  0 1 1 1 0 1 1 1 0 1 0 0 1 1 0 1 0 ! 
+
+D5    (pci_xtal)          : INPUT     :  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+D5    (pci_xtal)          : OUTPUT3   :  0 1 0 1 1 0 1 1 1 0 1 1 1 1 0 0 0 ! 
+D5    (pci_xtal)          : CONTROL   :  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 
 H6    (uart_cts)          : INPUT     :  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 H6    (uart_cts)          : OUTPUT3   :  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 

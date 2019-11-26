@@ -4,7 +4,7 @@ module top(
 
     output [3:0]        leds,
 
-    output              pci_mini_33V_ena,
+    output              pci_mini_33v_ena,
 
     input               uart_drv_ena_,
     input               uart_drv_sd_,
@@ -26,6 +26,7 @@ module top(
     input [0:0]         clk_to_sdram,
     input [0:0]         clk_to_sdram_n,
 
+    output              pci_xtal,
     input               pci_inta_,
     input               pci_rst_,
     input               pci_clk,
@@ -53,10 +54,11 @@ module top(
     input [20:0]        flash_a,
     input [15:0]        flash_dq,
 
-    output [161:0]      misc_outputs
+    output [1:0]        misc_outputs
 );
 
-    assign pci_mini_33V_ena = 1'b0;
+    assign pci_mini_33v_ena = 1'b0;
+    assign pci_xtal         = cntr[0];
 
     reg rst_ = 1'b0;
     always @(posedge clk25) begin
@@ -125,6 +127,7 @@ module top(
         ^ ^flash_a
         ^ ^flash_dq;
 
-    assign misc_outputs = {162{cntr[21]}};
+    //assign misc_outputs = {162{cntr[21]}};
+    assign misc_outputs = cntr[24:23];
 
 endmodule
