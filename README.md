@@ -108,6 +108,9 @@ UART_TXD                : D6 (ADM3222/T1IN)
 UART_RXD                : F4 (ADM3222/R1IN)
 UART_RTS                : G6 (ADM3222/T2IN)
 UART_CTS                : H6 (ADM3222/R2IN)
+
+MSEL0                   : M17   - Pulled high with R60
+MSEL1                   : N17   - Pulled low with R63
 ```
 
 HWIC Pins:
