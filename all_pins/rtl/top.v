@@ -54,7 +54,31 @@ module top(
     input [20:0]        flash_a,
     input [15:0]        flash_dq,
 
-    output [1:0]        misc_outputs
+    output              hwic_3,
+    output              hwic_11,
+    output              hwic_45,
+    output              hwic_12,
+    output              hwic_46,
+    output              hwic_13,
+    output              hwic_47,
+    output              hwic_14,
+    output              hwic_48,
+    output              hwic_15,
+    output              hwic_50,
+    output              hwic_18,
+    output              hwic_52,
+    output              hwic_19,
+    output              hwic_53,
+    output              hwic_20,
+    output              hwic_54,
+    output              hwic_21,
+    output              hwic_55,
+    output              hwic_56,
+    output              hwic_25,
+    input               hwic_32,
+    output              hwic_67,
+
+    output [0:0]        misc_outputs
 );
 
     assign pci_mini_33v_ena = 1'b0;
@@ -128,6 +152,29 @@ module top(
         ^ ^flash_dq;
 
     //assign misc_outputs = {162{cntr[21]}};
-    assign misc_outputs = cntr[24:23];
+    assign misc_outputs = cntr[23];
+
+    assign hwic_3     = cntr[23];
+    assign hwic_11    = cntr[23];
+    assign hwic_45    = cntr[23];
+    assign hwic_12    = cntr[23];
+    assign hwic_46    = cntr[23];
+    assign hwic_13    = cntr[23];
+    assign hwic_47    = cntr[23];
+    assign hwic_14    = cntr[23];
+    assign hwic_48    = cntr[23];
+    assign hwic_15    = cntr[23];
+    assign hwic_50    = cntr[23];
+    assign hwic_18    = cntr[23];
+    assign hwic_52    = cntr[23];
+    assign hwic_19    = cntr[23];
+    assign hwic_53    = cntr[23];
+    assign hwic_20    = cntr[23];
+    assign hwic_54    = cntr[23];
+    assign hwic_21    = cntr[23];
+    assign hwic_55    = cntr[23];
+    assign hwic_56    = cntr[23];
+    assign hwic_25    = cntr[23];
+    assign hwic_67    = cntr[23];
 
 endmodule

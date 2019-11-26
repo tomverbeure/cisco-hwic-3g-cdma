@@ -35,7 +35,6 @@ set_location_assignment PIN_D5   -to pci_xtal
 # These are pins that are set as output in the BSCAN dump and
 # that are toggling while the card is in the router.
 set_location_assignment PIN_C2 -to misc_outputs[0]
-set_location_assignment PIN_G21 -to misc_outputs[1]
 
 ;#------------------------------------------------------------
 ;# RS-232
@@ -153,8 +152,6 @@ set_location_assignment PIN_U2   -to pci_par
 ;# Same pin as pci_ad[24]
 ;# set_location_assignment PIN_E2   -to pci_IDSEL
 
-;#  XTAL1           :
-
 ;#------------------------------------------------------------
 ;# NOR Flash
 ;#------------------------------------------------------------
@@ -213,4 +210,30 @@ set_location_assignment PIN_AB6  -to flash_dq[0]
 ;#set_location_assignment PIN_zz        -to flash_byte_         ;# pulled up to high
 
 
+;#------------------------------------------------------------
+;# HWIC Connector
+;#------------------------------------------------------------
+set_location_assignment PIN_G21     -to hwic_3                  ;# Toggling output in Cisco router
+set_location_assignment PIN_G22     -to hwic_11
+set_location_assignment PIN_F21     -to hwic_45
+set_location_assignment PIN_E21     -to hwic_12
+set_location_assignment PIN_E22     -to hwic_46
+set_location_assignment PIN_D21     -to hwic_13
+set_location_assignment PIN_D22     -to hwic_47
+set_location_assignment PIN_C21     -to hwic_14
+set_location_assignment PIN_C22     -to hwic_48
+set_location_assignment PIN_J22     -to hwic_15
+set_location_assignment PIN_N22     -to hwic_50
+set_location_assignment PIN_T22     -to hwic_18
+set_location_assignment PIN_U21     -to hwic_52
+set_location_assignment PIN_V21     -to hwic_19
+set_location_assignment PIN_V22     -to hwic_53
+set_location_assignment PIN_W21     -to hwic_20
+set_location_assignment PIN_W22     -to hwic_54
+set_location_assignment PIN_Y21     -to hwic_21
+set_location_assignment PIN_Y22     -to hwic_55
+set_location_assignment PIN_N21     -to hwic_56
+set_location_assignment PIN_T21     -to hwic_25
+set_location_assignment PIN_A12     -to hwic_32
+set_location_assignment PIN_L18     -to hwic_67
 

@@ -157,3 +157,26 @@ Y6   : flash_dq[2]
 AA6  : flash_dq[1]
 AB6  : flash_dq[0]
 
+G21  : hwic_3
+G22  : hwic_12
+F21  : hwic_45
+E21  : hwic_12
+E22  : hwic_46
+D21  : hwic_13
+D22  : hwic_47
+C21  : hwic_14
+C22  : hwic_48
+J22  : hwic_15
+N22  : hwic_50
+T22  : hwic_18
+U21  : hwic_52
+V21  : hwic_19
+V22  : hwic_53
+W21  : hwic_20
+W22  : hwic_54
+Y21  : hwic_21
+Y22  : hwic_55
+N21  : hwic_56
+T21  : hwic_25
+A12  : hwic_32
+L18  : hwic_67
