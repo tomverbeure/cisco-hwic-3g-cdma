@@ -97,7 +97,59 @@ There are 3 ways to program a new bitstream into the FPGA:
 
     Including shipping, you can find these for less than $15, and they behave exactly like the official ones.
 
+    When not in development mode, you *could* also download a new bitstream through JTAG by using a so-called .jam 
+    file (which contains all the JTAG transactions) and a Jam file player that runs on a small microcontroller.
+    This solution has not been tried on this board, but there's no reason why it wouldn't work.
+    Check out [Intel's documentation](https://www.intel.com/content/www/us/en/programmable/support/support-resources/support-centers/devices/programming-tools/jam-stapl/tls-jam-embedded.html) 
+    on this.
 
+* Passive Serial
+
+    This is the way this Cisco has been configured: an external CPU (in this case, the Cisco router that hosts
+    this board), sends the bitstream to the PCB.
+
+    Alternatively, just like with the JTAG .jam player, one could make this work with a small external
+    microcontroller.
+
+    <To be implemented>
+
+
+* Active Serial
+
+    Most FPGA board use this mode. It requires an on-board serial PROM that contains the bitstream. At
+    powerup, the FPGA autonomously loads the bitstream from the PROM. No other active component are required.
+    The Cisco board doesn't use this because it will always be used inside a router that has the capability to
+    upload the bitstream in passive serial mode. And thus, there's no serial PROM on the board either.
+
+    However, it is possible to retrofit the board with a serial PROM.
+
+    ![Serial PROM Retrofit](./assets/serial_prom_retrofit.jpg)
+
+    It's obvious that this requires some soldering skills, and even then it's a pretty fragile solution.
+    But it does work!
+
+
+##  Active Serial Retrofit
+
+Steps:
+
+* Change MSEL[1:0] setting on FPGA from 2'b01 (passive serial mode) to 2'b10 (active serial)
+
+   Remove resistor R60. This is a pullup resistor that pulls MSEL[0] to VCCIO. The FPGA has
+   built-in pulldown resistors, so there is no need to add that. (It's interesting that resistor
+   R59 is a pulldown resistor for MSEL[1], which is redudant...) 
+
+* Remove SOT3-5 device that drives DCLK.
+
+   In passive mode, DCLK is an FPGA input, now it becomes an FPGA output.
+
+* Glue serial PROM onto the board in dead-bug position
+
+   The best location is empty space for the unpopulated NOR flash.
+
+* Wire up all the serial PROM pins
+
+    <FIXME: comprehensive list and pictures of convenient place to tap the required signals.>
 
 # Examples
 
