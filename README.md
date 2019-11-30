@@ -86,6 +86,11 @@ There are 3 ways to program a new bitstream into the FPGA:
     compatible JTAG dongle, and download new bitstreams with Quartus Programmer. This will be the default mode
     during RTL development.
 
+    The holes of connector J10 are usually soldered shut on this board. The best way to add a JTAG connector
+    is to solder it solidly in the place where it was intended to be. To do that, you'll first have to open
+    up these 10 soldering holes. Desoldering needles are perfect for that. They only cost a few dollars on
+    AliExpress, and it requires very little practice to learn how to use them.
+
     There are dirt cheap USB (~$2) Blaster clones out there, but these are based on a PIC or STM microcontroller.
     These very often don't work! You can read about this [here](https://tomverbeure.github.io/2018/04/18/Terasic-vs-Cheap-Clone-USB-Blaster.html).
 
@@ -141,13 +146,20 @@ Steps:
 
 * Remove SOT3-5 device that drives DCLK.
 
-   In passive mode, DCLK is an FPGA input, now it becomes an FPGA output.
+    In passive mode, DCLK is an FPGA input, now it becomes an FPGA output.
 
 * Glue serial PROM onto the board in dead-bug position
 
-   The best location is empty space for the unpopulated NOR flash.
+    The best location is empty space for the unpopulated NOR flash.
+
+    Make sure you install a 64Mbit PROM: an 8Mbit PROM is sufficient for this FPGA, but Quartus only 
+    supports EPCS4 or EPC64 devices. If you mistakenly installed an 8Mbit PROM, chances are that you
+    can still make it work by preparing a .jic file for a 4Mbit EPCS4 and enabling bitstream
+    compression, which should reduce the bitstream size from the required 6Mbit to below 4Mbit.
 
 * Wire up all the serial PROM pins
+
+    Need to 
 
     <FIXME: comprehensive list and pictures of convenient place to tap the required signals.>
 
