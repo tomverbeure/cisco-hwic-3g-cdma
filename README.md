@@ -76,6 +76,28 @@ All essential componets for LED blinky are connected to 3.3V. No need for 5V pow
     * 1.5V and 3.3V.
     * 1.5V not connected? MC5727 doesn't seem to need it.
 
+# FPGA Bitstream Configuration
+
+There are 3 ways to program a new bitstream into the FPGA:
+
+* JTAG
+
+    The most obvious way is to populate connector J10 with a 10-pin 5x2 connector, use a USB Blaster
+    compatible JTAG dongle, and download new bitstreams with Quartus Programmer. This will be the default mode
+    during RTL development.
+
+    There are dirt cheap USB (~$2) Blaster clones out there, but these are based on a PIC or STM microcontroller.
+    These very often don't work! You can read about this [here](https://tomverbeure.github.io/2018/04/18/Terasic-vs-Cheap-Clone-USB-Blaster.html).
+
+    What you need is a USB Blaster that contains an FTDI chip and a CPLD, just like the real one from Intel. 
+    One way to make sure you get that is to simply buy an official Intel one ($200!!!), or an 'official' clone 
+    from Terasic (~$50). Or you buy a clone on AliExpress that explicty mentions "FT245+CPLD", like this: 
+
+    ![USB Blaster - FT245 + CPLD](./assets/USB_Blaster_FT245_CPLD.png)
+
+    Including shipping, you can find these for less than $15, and they behave exactly like the official ones.
+
+
 
 # Examples
 
