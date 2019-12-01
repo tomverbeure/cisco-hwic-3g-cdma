@@ -1,6 +1,6 @@
 (export (version D)
   (design
-    (source /home/tom/projects/cisco-hwic-3g-cdma/devboard/cisc_hwic_dev_board/cisc_hwic_dev_board.sch)
+    (source /home/tom/projects/cisco-hwic-3g-cdma/devboard/cisco_hwic_dev_board/cisco_hwic_dev_board.sch)
     (date "Sun 01 Dec 2019 01:20:40 PM PST")
     (tool "Eeschema 5.1.5-52549c5~84~ubuntu16.04.1")
     (sheet (number 1) (name /) (tstamps /)
@@ -9,7 +9,7 @@
         (company)
         (rev)
         (date)
-        (source cisc_hwic_dev_board.sch)
+        (source cisco_hwic_dev_board.sch)
         (comment (number 1) (value ""))
         (comment (number 2) (value ""))
         (comment (number 3) (value ""))
@@ -17,7 +17,7 @@
   (components
     (comp (ref J1)
       (value Cisco_HWIC)
-      (footprint cisc_hwic_dev_board:PinHeader_2x34_P1.27mm_Vertical_SMD_Top_Bottom)
+      (footprint cisco_hwic_dev_board:PinHeader_2x34_P1.27mm_Vertical_SMD_Top_Bottom)
       (datasheet ~)
       (libsource (lib cisco_hwic_dev_board) (part Cisco_HWIC) (description "Generic connector, double row, 02x34, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)"))
       (sheetpath (names /) (tstamps /))
@@ -88,7 +88,7 @@
       (fields
         (field (name Reference) J)
         (field (name Value) Cisco_HWIC)
-        (field (name Footprint) cisc_hwic_dev_board:PinHeader_2x34_P1.27mm_Vertical_SMD_Top_Bottom))
+        (field (name Footprint) cisco_hwic_dev_board:PinHeader_2x34_P1.27mm_Vertical_SMD_Top_Bottom))
       (pins
         (pin (num 1) (name Pin_1) (type passive))
         (pin (num 2) (name Pin_2) (type passive))
@@ -168,7 +168,7 @@
     (library (logical Connector_Generic)
       (uri /home/tom/projects/kicad-libraries/kicad-symbols/Connector_Generic.lib))
     (library (logical cisco_hwic_dev_board)
-      (uri /home/tom/projects/cisco-hwic-3g-cdma/devboard/cisc_hwic_dev_board/Library/cisco_hwic_dev_board.lib)))
+      (uri /home/tom/projects/cisco-hwic-3g-cdma/devboard/cisco_hwic_dev_board/Library/cisco_hwic_dev_board.lib)))
   (nets
     (net (code 1) (name /Pin_37)
       (node (ref J3) (pin 3))

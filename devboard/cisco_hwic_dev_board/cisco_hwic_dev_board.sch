@@ -130,7 +130,7 @@ U 1 1 5DE79121
 P 4550 3250
 F 0 "J1" H 4600 5067 50  0000 C CNN
 F 1 "Cisco_HWIC" H 4600 4976 50  0000 C CNN
-F 2 "cisc_hwic_dev_board:PinHeader_2x34_P1.27mm_Vertical_SMD_Top_Bottom" H 4550 3250 50  0001 C CNN
+F 2 "cisco_hwic_dev_board:PinHeader_2x34_P1.27mm_Vertical_SMD_Top_Bottom" H 4550 3250 50  0001 C CNN
 F 3 "~" H 4550 3250 50  0001 C CNN
 	1    4550 3250
 	1    0    0    -1  
