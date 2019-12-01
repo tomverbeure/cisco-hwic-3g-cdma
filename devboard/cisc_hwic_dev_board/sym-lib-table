@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name cisco_hwic_dev_board)(type Legacy)(uri ${KIPRJMOD}/Library/cisco_hwic_dev_board.lib)(options "")(descr ""))
+)
