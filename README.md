@@ -204,7 +204,7 @@ HWIC Pins:
 23 GPIOs from FPGA on HWIC connector:
 
 ```
-GND	69	1	-	    -	        35
+        1	-	    -	        35
 		2	GND	    GND	        36
 	70	3	G21	    GND	        37          3 == toggling output on Cisco router
 		4	GND	    -  	        38
@@ -224,7 +224,7 @@ GND	69	1	-	    -	        35
 		18	T22	    U21	        52
 	78	19	V21	    V22	        53
 		20	W21	    W22	        54
-	79	21	Y21	    Y22	        55
+GND	79	21	Y21	    Y22	        55
 		22	3.3V    N21	        56
 5.0	80	23	MXQ1    -	        57
 		24	GND	    MXQ2        58
@@ -236,7 +236,7 @@ GND	83	29	GND	    -  	        63
 		30	-  	    GND	        64
 12.	84	31	GND	    -  	        65
 		32	A12	    GND	        66          32: FPGA input only. Goes to clock input.
-GND	85	33	GND	    L18/MXQ7    67
+	    33	GND	    L18/MXQ7    67
 		34	-   	-	        68
 ```
 
