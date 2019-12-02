@@ -6,4 +6,10 @@ K connector
 F ~
 $ENDCMP
 #
+$CMP Conn_02x34_Top_Bottom_Cisco
+D Generic connector, double row, 02x34, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
 #End Doc Library

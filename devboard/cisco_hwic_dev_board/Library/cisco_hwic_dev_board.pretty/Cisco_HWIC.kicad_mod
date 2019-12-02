@@ -1,4 +1,4 @@
-(module PinHeader_2x34_P1.27mm_Vertical_SMD_Top_Bottom (layer F.Cu) (tedit 5DE42F8F)
+(module Cisco_HWIC (layer F.Cu) (tedit 5DE42F8F)
   (descr "surface-mounted straight pin header, 2x34, 1.27mm pitch, double rows")
   (tags "Surface mounted pin header SMD 2x34 1.27mm double row")
   (attr smd)
