@@ -207,8 +207,8 @@ HWIC Pins:
         1	-	    -	        35
 		2	GND	    GND	        36
 	70	3	G21	    GND	        37          3 == toggling output on Cisco router
-		4	GND	    -  	        38
-	71	5		    GND	        39
+		4	GND	    *  	        38
+	71	5	-       GND	        39
 		6	GND	    -	        40
 	72	7	-	    -	        41
 		8	-	    -	        42
@@ -218,8 +218,8 @@ HWIC Pins:
 		12	E21	    E22	        46
 	75	13	D21     D22	        47
 		14	C21     C22	        48
-	76	15	J22     -  	        49          49 == MXQ12 and nCONFIG_OE_
-		16	-  	    N22	        50          16 == nCONFIG and MXQ12_OE_
+	76	15	J22     *  	        49          49 == MXQ12 and nCONFIG_OE_
+		16	*  	    N22	        50          16 == nCONFIG and MXQ12_OE_
 	77	17	-	    GND	        51
 		18	T22	    U21	        52
 	78	19	V21	    V22	        53
@@ -229,12 +229,12 @@ GND	79	21	Y21	    Y22	        55
 5.0	80	23	MXQ1    -	        57
 		24	GND	    MXQ2        58
 GND	81	25	T21	    -	        59          25 == DCLK_OE_ / 59 == DCLK, pulled high to 3.3V
-		26	-  	    -  	        60
-3.3	82	27	-  	    -  	        61
-		28	-  	    -           62
-GND	83	29	GND	    -  	        63
-		30	-  	    GND	        64
-12.	84	31	GND	    -  	        65
+		26	*  	    *  	        60
+3.3	82	27	*  	    *  	        61
+		28	*  	    -           62
+GND	83	29	GND	    *  	        63
+		30	*  	    GND	        64
+12.	84	31	GND	    *  	        65
 		32	A12	    GND	        66          32: FPGA input only. Goes to clock input.
 	    33	GND	    L18/MXQ7    67
 		34	-   	-	        68
