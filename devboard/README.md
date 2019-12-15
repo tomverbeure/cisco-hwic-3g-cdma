@@ -1,0 +1,5 @@
+
+# Breakout board
+
+**IMPORTANT: DO NOT USE THE CURRENT PCB. IT'S COMPLETELY BROKEN!!!**
+
