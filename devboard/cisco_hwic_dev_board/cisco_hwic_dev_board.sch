@@ -360,7 +360,7 @@ U 1 1 5E344F6E
 P 7050 1700
 F 0 "J1" H 7100 2817 50  0000 C CNN
 F 1 "Conn_02x20_Odd_Even" H 7100 2726 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Horizontal" H 7050 1700 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical" H 7050 1700 50  0001 C CNN
 F 3 "~" H 7050 1700 50  0001 C CNN
 	1    7050 1700
 	1    0    0    -1  
@@ -678,7 +678,7 @@ U 1 1 5DF829AF
 P 5500 5550
 F 0 "U1" H 5600 5850 50  0000 C CNN
 F 1 "AT25xxx" H 5700 5250 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5500 5550 50  0001 C CNN
+F 2 "Package_SO:SOIC-8_5.275x5.275mm_P1.27mm" H 5500 5550 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8707-SEEPROM-AT25010B-020B-040B-Datasheet.pdf" H 5500 5550 50  0001 C CNN
 	1    5500 5550
 	1    0    0    -1  

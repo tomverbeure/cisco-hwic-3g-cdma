@@ -360,7 +360,7 @@ U 1 1 5E344F6E
 P 7050 1700
 F 0 "J1" H 7100 2817 50  0000 C CNN
 F 1 "Conn_02x20_Odd_Even" H 7100 2726 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Horizontal" H 7050 1700 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical" H 7050 1700 50  0001 C CNN
 F 3 "~" H 7050 1700 50  0001 C CNN
 	1    7050 1700
 	1    0    0    -1  
@@ -1144,79 +1144,5 @@ F 2 "" H 9500 2200 50  0001 C CNN
 F 3 "" H 9500 2200 50  0001 C CNN
 	1    9500 2200
 	0    -1   -1   0   
-$EndComp
-$Comp
-L Mechanical:MountingHole_Pad H1
-U 1 1 5E426984
-P 10200 850
-F 0 "H1" V 10154 1000 50  0000 L CNN
-F 1 "MountingHole_Pad" V 10245 1000 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm_Pad_Via" H 10200 850 50  0001 C CNN
-F 3 "~" H 10200 850 50  0001 C CNN
-	1    10200 850 
-	0    1    1    0   
-$EndComp
-$Comp
-L Mechanical:MountingHole_Pad H2
-U 1 1 5E42754E
-P 10200 1050
-F 0 "H2" V 10154 1200 50  0000 L CNN
-F 1 "MountingHole_Pad" V 10245 1200 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm_Pad_Via" H 10200 1050 50  0001 C CNN
-F 3 "~" H 10200 1050 50  0001 C CNN
-	1    10200 1050
-	0    1    1    0   
-$EndComp
-$Comp
-L Mechanical:MountingHole_Pad H3
-U 1 1 5E428F88
-P 10200 1250
-F 0 "H3" V 10154 1400 50  0000 L CNN
-F 1 "MountingHole_Pad" V 10245 1400 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm_Pad_Via" H 10200 1250 50  0001 C CNN
-F 3 "~" H 10200 1250 50  0001 C CNN
-	1    10200 1250
-	0    1    1    0   
-$EndComp
-$Comp
-L Mechanical:MountingHole_Pad H4
-U 1 1 5E429AF8
-P 10200 1450
-F 0 "H4" V 10154 1600 50  0000 L CNN
-F 1 "MountingHole_Pad" V 10245 1600 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm_Pad_Via" H 10200 1450 50  0001 C CNN
-F 3 "~" H 10200 1450 50  0001 C CNN
-	1    10200 1450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	9750 1450 9900 1450
-Wire Wire Line
-	10100 850  9900 850 
-Wire Wire Line
-	9900 850  9900 1050
-Connection ~ 9900 1450
-Wire Wire Line
-	9900 1450 10100 1450
-Wire Wire Line
-	10100 1050 9900 1050
-Connection ~ 9900 1050
-Wire Wire Line
-	9900 1050 9900 1250
-Wire Wire Line
-	10100 1250 9900 1250
-Connection ~ 9900 1250
-Wire Wire Line
-	9900 1250 9900 1450
-$Comp
-L power:GND #PWR022
-U 1 1 5E453BC0
-P 9750 1450
-F 0 "#PWR022" H 9750 1200 50  0001 C CNN
-F 1 "GND" V 9755 1322 50  0000 R CNN
-F 2 "" H 9750 1450 50  0001 C CNN
-F 3 "" H 9750 1450 50  0001 C CNN
-	1    9750 1450
-	0    1    1    0   
 $EndComp
 $EndSCHEMATC
