@@ -240,6 +240,13 @@ GND	83	29	GND	    *  	        63
 		34	-   	-	        68
 ```
 
+SOT23-5 ICs:
+
+* U3: 'VE': AND gate
+* U7: 'AN': 74AHC1G126: Tri-state buffer with active high OE
+* U9: 'CGK' or 'VG': SN74LVC1G32: OR gate
+
+
 AT90SC12836RCT/C9059 connections:
 ```
 1:      GND                         8:      5V
