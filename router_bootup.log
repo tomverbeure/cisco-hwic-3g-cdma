@@ -1,0 +1,21 @@
+hostname MyCiscoRouter
+enable secret 5 $1$MVp0$HlIyx6t9ospAkDcbIB3v1/
+enable password test1234
+line vty 0 4
+password test1234
+snmp-server community public
+!
+no ip routing
+
+!
+interface GigabitEthernet0/0
+no shutdown
+ip address 192.168.1.1 255.255.255.0
+no mop enabled
+!
+interface GigabitEthernet0/1
+shutdown
+no ip address
+!
+end
+
